@@ -65,7 +65,7 @@ router.put('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(dbTagData => res.json(dbTagData))
+  .then(dbTagData => res.status(200).json(dbTagData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
